@@ -2,29 +2,24 @@
 
     use Illuminate\Support\Facades\Route;
 
-    Route::get('/', function () {
-        // return view('welcome');
-        return    "
-        <h1>Halaman Home</h1>
-        <a href='/about'>About</a><br>
-        <a href='/profile'>Profile</a>
-        ";
+    Route::get('/welcome', function () {
+        return view('welcome');
+    });
+
+    Route::get('/index', function () {
+        return view('index');
     });
 
     Route::get('/about', function () {
-        // return view('welcome');
-        return "
-        <h1>Halaman About</h1>
-        <a href='/'>Home</a><br>
-        <a href='/profile'>Profile</a>
-        ";
+        return view('about');
+    });
+
+    Route::get('/mahasiswa', function () {
+        return view('mahasiswa');
     });
 
     Route::get('/profile', function () {
-        // return view('welcome');
-        return "
-        <h1>Halaman Profile</h1>
-        <a href='/about'>About</a><br>
-        <a href='/'>Home</a>
-        ";
+        $nama = 'Geubrina Raseuki';
+        // return view('profile', compact('nama'));
+        return view('profile')->with('nama', $nama);
     });
