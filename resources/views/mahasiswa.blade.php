@@ -47,27 +47,22 @@
     </tr>
    </thead>
   <tbody>
-  <tr>
-    <td>0702232109</td>
-    <td>Geubrina Raseuki</td>
-    <td>Perempuan</td>
-    <td>07-02-2006</td>
-    <td rowspan="3">Kota Binjai</td>
-  </tr>
-  <tr>
-    <td>0702232110</td>
-    <td>Eno Syahila</td>
-    <td>Perempuan</td>
-    <td>16-12-2003</td>
-  </tr>
-  <tr>
-    <td>0702232111</td>
-    <td>Nazwa Aulia</td>
-    <td>Perempuan</td>
-    <td>09-09-2005</td>
-  </tr>
+    <?php $nilai_awal = 0; ?>
+    @while ($nilai_awal < $jumlah)
+
+    <tr>
+      <td>{{ $npm[$nilai_awal] }}</td>
+      <td>{{ $nama[$nilai_awal] }}</td>
+      <td>Perempuan</td>
+      <td>07-02-2006</td>
+      <td>Kota Binjai</td>
+    </tr>
+
+    <?php $nilai_awal++ ?>        
+    @endwhile
   </tbody>
  </table>
+ 
 </div>
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
