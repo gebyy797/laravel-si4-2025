@@ -35,8 +35,10 @@
 <div class="container" >
  <h1>Ini adalah Halaman Mahasiswa</h1>
 
-
- <table class="table table-danger table-sm table-hover table-striped
+ <div class="row">
+  <div class="col-sm-6">
+    <h4>Tabel Mahasiswa</h4>
+<table class="table table-danger table-sm table-hover table-striped
  table-bordered text-center">
   <thead> 
     <tr>
@@ -57,6 +59,44 @@
     @endfor
   </tbody>
  </table>
+  </div>
+  <div class="col-sm-6">
+    <h4>Form Mahasiswa</h4>
+    <form action="" method="GET">
+      <div class="row">
+        <div class="col-sm-6">
+          <label for="">NPM</label>
+          <input type="number" name="npm" class="form-control" placeholder="Input NPM">
+        </div>
+        <div class="col-sm-6">
+          <label for="">Nama Mahasiswa</label>
+          <input type="text" name="nama_mahasiswa" class="form-control" placeholder="Input Nama Mahasiswa">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <label for="">Tanggal Lahir</label>
+          <input type="date" name="tgl_lahir"  class="form-control">
+        </div>
+        <div class="col-sm-6">
+          <label for="">Prodi</label>
+          <select name="prodi" class="form-control">
+          <option value="">Sistem Informasi</option>
+          <option value="">Teknik Informatika</option>
+          <option value="">Sains data</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col-sm-12">
+          <button class="btn btn-primary" style="width: 100%" type="submit">Simpan</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+  </div>
 
 </div>
    
